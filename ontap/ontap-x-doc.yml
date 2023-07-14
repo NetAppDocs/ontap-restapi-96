@@ -293,13 +293,6 @@ paths:
         subcategory: Manage cluster nodes
         explorer: false
   "/cluster/nodes/{uuid}":
-    delete:
-      x-doc:
-        title: Delete a node from a cluster
-        category: cluster
-        filename: delete-cluster-nodes-.html
-        subcategory: Manage cluster nodes
-        explorer: false
     get:
       x-doc:
         title: Retrieve node information
@@ -314,82 +307,8 @@ paths:
         filename: patch-cluster-nodes-.html
         subcategory: Manage cluster nodes
         explorer: false
-  "/cluster/ntp/keys":
-    get:
-      x-doc:
-        title: Retrieve NTP symmetric authentication keys
-        category: cluster
-        filename: get-cluster-ntp-keys.html
-        subcategory: Manage cluster NTP keys
-        explorer: false
-    post:
-      x-doc:
-        title: Create an NTP symmetric authentication key entry
-        category: cluster
-        filename: post-cluster-ntp-keys.html
-        subcategory: Manage cluster NTP keys
-        explorer: false
-  "/cluster/ntp/keys/{id}":
-    delete:
-      x-doc:
-        title: Delete an NTP key
-        category: cluster
-        filename: delete-cluster-ntp-keys-.html
-        subcategory: Manage cluster NTP keys
-        explorer: false
-    get:
-      x-doc:
-        title: Retrieve NTP symmetric authentication key details
-        category: cluster
-        filename: get-cluster-ntp-keys-.html
-        subcategory: Manage cluster NTP keys
-        explorer: false
-    patch:
-      x-doc:
-        title: Update NTP symmetric authentication key details
-        category: cluster
-        filename: patch-cluster-ntp-keys-.html
-        subcategory: Manage cluster NTP keys
-        explorer: false
-  "/cluster/ntp/servers":
-    get:
-      x-doc:
-        title: Retrieve external NTP time servers
-        category: cluster
-        filename: get-cluster-ntp-servers.html
-        subcategory: Manage cluster NTP servers
-        explorer: false
-    post:
-      x-doc:
-        title: Validate an external NTP time server
-        category: cluster
-        filename: post-cluster-ntp-servers.html
-        subcategory: Manage cluster NTP servers
-        explorer: false
 
-  "/cluster/ntp/servers/{server}":
-    delete:
-      x-doc:
-        title: Delete an external NTP server 
-        category: cluster
-        filename: delete-cluster-ntp-servers-.html
-        subcategory: Manage cluster NTP servers
-        explorer: false
-    get:
-      x-doc:
-        title: Retrieve an external NTP server configuration
-        category: cluster
-        filename: get-cluster-ntp-servers-.html
-        subcategory: Manage cluster NTP servers
-        explorer: false
-    patch:
-      x-doc:
-        title: Update an NTP server configuration 
-          after validation
-        category: cluster
-        filename: patch-cluster-ntp-servers-.html
-        subcategory: Manage cluster NTP servers
-        explorer: false
+ 
   "/cluster/peers":
     get:
       x-doc:
@@ -479,13 +398,6 @@ paths:
         subcategory: Manage cluster software
         explorer: false
   "/cluster/software/download":
-    get:
-      x-doc:
-        title: Retrieve software or firmware download status
-        category: cluster
-        filename: get-cluster-software-download.html
-        subcategory: Manage cluster software
-        explorer: false
     post:
       x-doc:
         title: Download a software or firmware package
@@ -863,81 +775,8 @@ paths:
         filename: get-network-fc-wwpn-aliases-.html
         subcategory: Manage FC WWPN aliases
         explorer: false
-  "/network/http-proxy":
-    get:
-      x-doc:
-        title: Retrieve http proxy configurations for all SVMs and cluster
-          IPspaces
-        category: networking
-        filename: get-network-http-proxy.html
-        subcategory: Manage HTTP proxy configuration
-        explorer: false
-    post:
-      x-doc:
-        title: Create an http proxy configuration for an SVM or cluster IPspace
-        category: networking
-        filename: post-network-http-proxy.html
-        subcategory: Manage HTTP proxy configuration
-        explorer: false
-  "/network/http-proxy/{uuid}":
-    delete:
-      x-doc:
-        title: Delete http proxy configuration for an SVM or cluster IPspace
-        category: networking
-        filename: delete-network-http-proxy-.html
-        subcategory: Manage HTTP proxy configuration
-        explorer: false
-    get:
-      x-doc:
-        title: Display http proxy server, port, and IPspace information for an SVM or cluster IPspace
-        category: networking
-        filename: get-network-http-proxy-.html
-        subcategory: Manage HTTP proxy configuration
-        explorer: false
-    patch:
-      x-doc:
-        title: Update proxy server, port, username, and password parameters
-        category: networking
-        filename: patch-network-http-proxy-.html
-        subcategory: Manage HTTP proxy configuration
-        explorer: false
-  "/network/ip/bgp/peer-groups":
-    get:
-      x-doc:
-        title: Retrieve all BGP peer group details for VIP
-        category: networking
-        filename: get-network-ip-bgp-peer-groups.html
-        subcategory: Manage BGP peer groups
-        explorer: false
-    post:
-      x-doc:
-        title: Create a new BGP peer group for VIP
-        category: networking
-        filename: post-network-ip-bgp-peer-groups.html
-        subcategory: Manage BGP peer groups
-        explorer: false
-  "/network/ip/bgp/peer-groups/{uuid}":
-    delete:
-      x-doc:
-        title: Delete a BGP peer group for VIP
-        category: networking
-        filename: delete-network-ip-bgp-peer-groups-.html
-        subcategory: Manage BGP peer groups
-        explorer: false
-    get:
-      x-doc:
-        title: Retrieve details of a BGP peer group for VIP
-        category: networking
-        filename: get-network-ip-bgp-peer-groups-.html
-        subcategory: Manage BGP peer groups
-        explorer: false
-    patch:
-      x-doc:
-        title: Update a BGP peer group for VIP
-        category: networking
-        filename: patch-network-ip-bgp-peer-groups-.html
-        subcategory: Manage BGP peer groups
-        explorer: false
+ 
+ 
   "/network/ip/interfaces":
     get:
       x-doc:
@@ -1174,15 +1013,6 @@ paths:
         title: Update CIFS mandatory and optional parameters 
         category: NAS
         filename: patch-protocols-cifs-services-.html
-        subcategory: Manage CIFS services
-        explorer: false
-  "/protocols/cifs/services/{svm.uuid}/metrics":
-    get:
-      x-doc:
-        title: Retrieve CIFS protocol historical performance metrics for an SVM
-          svm
-        category: NAS
-        filename: get-protocols-cifs-services-metrics.html
         subcategory: Manage CIFS services
         explorer: false
 
@@ -1677,7 +1507,7 @@ paths:
         filename: get-protocols-nfs-kerberos-interfaces.html
         subcategory: View and update Kerberos interfaces
         explorer: false
-  "/protocols/nfs/kerberos/interfaces/{interface.uuid}":
+  "/protocols/nfs/kerberos/interfaces/{uuid}":
     get:
       x-doc:
         title: Retrieve a Kerberos interface
@@ -3630,7 +3460,7 @@ paths:
         filename: post-storage-quota-rules.html
         subcategory: Manage storage quota policy rules
         explorer: false
-  "/storage/quota/rules/{uuid}":
+  "/storage/quota/rules/{rule.uuid}":
     delete:
       x-doc:
         title: Delete a quota policy rule
@@ -4048,7 +3878,7 @@ paths:
         filename: post-storage-volumes-files-.html
         subcategory: Manage files and directories
         explorer: false
-  "/storage/volumes/{volume.uuid}/metrics":
+  "/storage/volumes/{uuid}/metrics":
     get:
       x-doc:
         title: Retrieve historical performance metrics for a volume
@@ -4413,7 +4243,7 @@ paths:
         filename: post-svm-peer-permissions.html
         subcategory: Manage SVM peer permissions
         explorer: false
-  "/svm/peer-permissions/{cluster_peer.uuid}/{svm.uuid}":
+  "/svm/peer-permissions/{cluster.uuid}/{svm.uuid}":
     delete:
       x-doc:
         title: Delete SVM peer permissions
@@ -4450,7 +4280,7 @@ paths:
         filename: post-svm-peers.html
         subcategory: Manage SVM peer relationships
         explorer: false
-  "/svm/peers/{uuid}":
+  "/svm/peers/{peer.uuid}":
     delete:
       x-doc:
         title: Delete an SVM peer relationship
