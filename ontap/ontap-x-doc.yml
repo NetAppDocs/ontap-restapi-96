@@ -125,7 +125,6 @@ paths:
         title: Retrieve application templates
         category: application
         filename: get-application-templates.html
-        subcategory: View application templates
         explorer: false
   "/application/templates/{name}":
     get:
@@ -133,7 +132,6 @@ paths:
         title: Retrieve an application template
         category: application
         filename: get-application-templates-.html
-        subcategory: View application templates
         explorer: false
   "/cloud/targets":
     get:
@@ -273,7 +271,6 @@ paths:
         title: Retrieve historical performance metrics for the cluster
         category: cluster
         filename: get-cluster-metrics.html
-        subcategory: Manage cluster mediators
         explorer: false
  
   
@@ -2799,14 +2796,12 @@ paths:
         title: List key servers configured in an external key manager
         category: security
         filename: get-security-key-managers-key-servers.html
-        subcategory: Manage security key managers
         explorer: false
     post:
       x-doc:
         title: Add primary key servers to an external key manager
         category: security
         filename: post-security-key-managers-key-servers.html
-        subcategory: Manage key manager servers
         explorer: false
   "/security/key-managers/{uuid}/key-servers/{server}":
     delete:
@@ -2814,21 +2809,18 @@ paths:
         title: Delete a primary key server
         category: security
         filename: delete-security-key-managers-key-servers-.html
-        subcategory: Manage key manager servers
         explorer: false
     get:
       x-doc:
         title: Retrieve key servers configured in an external key manager
         category: security
         filename: get-security-key-managers-key-servers-.html
-        subcategory: Manage key manager servers
         explorer: false
     patch:
       x-doc:
         title: Update a primary key server
         category: security
         filename: patch-security-key-managers-key-servers-.html
-        subcategory: Manage key manager servers
         explorer: false
   "/security/login/messages":
     get:
@@ -2843,14 +2835,12 @@ paths:
         title: Retrieve login messages configuration by UUID
         category: security
         filename: get-security-login-messages-.html
-        subcategory: View and update login message configuration
         explorer: false
     patch:
       x-doc:
         title: Update login messages configuration
         category: security
         filename: patch-security-login-messages-.html
-        subcategory: View and update login message configuration
         explorer: false
 
   "/security/roles":
@@ -3118,21 +3108,18 @@ paths:
         title: Delete an aggregate specified by the UUID
         category: storage
         filename: delete-storage-aggregates-.html
-        subcategory: Manage storage aggregates
         explorer: false
     get:
       x-doc:
         title: Retrieve an aggregate specified by the UUID
         category: storage
         filename: get-storage-aggregates-.html
-        subcategory: Manage storage aggregates
         explorer: false
     patch:
       x-doc:
         title: Update an aggregate specified by the UUID 
         category: storage
         filename: patch-storage-aggregates-.html
-        subcategory: Manage storage aggregates
         explorer: false
   "/storage/aggregates/{uuid}/metrics":
     get:
@@ -3142,29 +3129,12 @@ paths:
         filename: get-storage-aggregates-metrics.html
         subcategory: Storage aggregate metrics
         explorer: false
-  "/storage/bridges":
-    get:
-      x-doc:
-        title: Retrieve a collection of bridges
-        category: storage
-        filename: get-storage-bridges.html
-        subcategory: Manage bridges
-        explorer: false
-  "/storage/bridges/{wwn}":
-    get:
-      x-doc:
-        title: Retrieve a specific bridge
-        category: storage
-        filename: get-storage-bridges-.html
-        subcategory: Manage bridges
-        explorer: false
   "/storage/cluster":
     get:
       x-doc:
         title: Report cluster-wide storage details across different tiers
         category: storage
         filename: get-storage-cluster.html
-        subcategory: Manage bridges
         explorer: false
   "/storage/disks":
     get:
@@ -3195,7 +3165,6 @@ paths:
         title: Create a clone of the file
         category: storage
         filename: post-storage-file-clone.html
-        subcategory: Manage storage file clones
         explorer: false
  
   
@@ -3738,14 +3707,14 @@ paths:
         title: Retrieve Snapshot copy policies
         category: storage
         filename: get-storage-snapshot-policies.html
-        subcategory: Create and retrieve Snapshot copy policies
+        subcategory: Manage Snapshot copy policies and schedules
         explorer: false
     post:
       x-doc:
         title: Create a Snapshot copy policy
         category: storage
         filename: post-storage-snapshot-policies.html
-        subcategory: Create and retrieve Snapshot copy policies
+        subcategory: Manage Snapshot copy policies and schedules
         explorer: false
   "/storage/snapshot-policies/{snapshot-policy.uuid}/schedules":
     get:
@@ -3884,7 +3853,6 @@ paths:
         title: Retrieve historical performance metrics for a volume
         category: storage
         filename: get-storage-volumes-metrics.html
-        subcategory: Manage files and directories
         explorer: false
   "/storage/volumes/{volume.uuid}/snapshots":
     get:
