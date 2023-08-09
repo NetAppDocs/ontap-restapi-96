@@ -3707,14 +3707,14 @@ paths:
         title: Retrieve Snapshot copy policies
         category: storage
         filename: get-storage-snapshot-policies.html
-        subcategory: Manage Snapshot copy policies and schedules
+        subcategory: Create and retrieve Snapshot copy policies 
         explorer: false
     post:
       x-doc:
         title: Create a Snapshot copy policy
         category: storage
         filename: post-storage-snapshot-policies.html
-        subcategory: Manage Snapshot copy policies and schedules
+        subcategory: Create and retrieve Snapshot copy policies 
         explorer: false
   "/storage/snapshot-policies/{snapshot-policy.uuid}/schedules":
     get:
@@ -3722,14 +3722,12 @@ paths:
         title: Retrieve Snapshot copy policy schedules
         category: storage
         filename: get-storage-snapshot-policies-schedules.html
-        subcategory: Manage Snapshot copy policies and schedules
         explorer: false
     post:
       x-doc:
         title: Add a schedule to a Snapshot copy policy
         category: storage
         filename: post-storage-snapshot-policies-schedules.html
-        subcategory: Manage Snapshot copy policies and schedules
         explorer: false
   "/storage/snapshot-policies/{snapshot-policy.uuid}/schedules/{uuid}":
     delete:
@@ -3737,21 +3735,18 @@ paths:
         title: Delete a schedule from a Snapshot copy policy
         category: storage
         filename: delete-storage-snapshot-policies-schedules-.html
-        subcategory: Manage Snapshot copy policies and schedules
         explorer: false
     get:
       x-doc:
         title: Retrieve Snapshot copy policy schedule details
         category: storage
         filename: get-storage-snapshot-policies-schedules-.html
-        subcategory: Manage Snapshot copy policies and schedules
         explorer: false
     patch:
       x-doc:
         title: Update a Snapshot copy policy schedule
         category: storage
-        filename: patch-storage-snapshot-policies-schedules-.html
-        subcategory: Manage Snapshot copy policies and schedules
+        filename: patch-storage-snapshot-policies-schedules-.htm
         explorer: false
   "/storage/snapshot-policies/{uuid}":
     delete:
@@ -3759,21 +3754,18 @@ paths:
         title: Delete a Snapshot copy policy
         category: storage
         filename: delete-storage-snapshot-policies-.html
-        subcategory: Manage Snapshot copy policies and schedules
         explorer: false
     get:
       x-doc:
         title: Retrieve Snapshot copy policy details
         category: storage
         filename: get-storage-snapshot-policies-.html
-        subcategory: Manage Snapshot copy policies and schedules
         explorer: false
     patch:
       x-doc:
         title: Update a Snapshot copy policy
         category: storage
         filename: patch-storage-snapshot-policies-.html
-        subcategory: Manage Snapshot copy policies and schedules
         explorer: false
   
   
