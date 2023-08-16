@@ -667,7 +667,7 @@ paths:
   "/network/fc/interfaces":
     get:
       x-doc:
-        title: Retrieves FC interfaces
+        title: Retrieve FC interfaces
         category: networking
         filename: get-network-fc-interfaces.html
         subcategory: Manage FC network interfaces
@@ -1559,7 +1559,7 @@ paths:
   "/protocols/nfs/services":
     get:
       x-doc:
-        title: Retrieves NFS configuration for SVMs
+        title: Retrieve NFS configuration for SVMs
         category: NAS
         filename: get-protocols-nfs-services.html
         subcategory: Manage NFS services
@@ -1956,14 +1956,14 @@ paths:
         title: Retrieve initiator groups
         category: SAN
         filename: get-protocols-san-igroups.html
-        subcategory: Manage SAN iGroups
+        subcategory: Manage SAN igroups
         explorer: false
     post:
       x-doc:
         title: Create an initiator group
         category: SAN
         filename: post-protocols-san-igroups.html
-        subcategory: Manage SAN iGroups
+        subcategory: Manage SAN igroups
         explorer: false
  
   "/protocols/san/igroups/{igroup.uuid}/initiators":
@@ -1972,14 +1972,14 @@ paths:
         title: Retrieve initiators of an initiator group
         category: SAN
         filename: get-protocols-san-igroups-initiators.html
-        subcategory: Manage SAN iGroups
+        subcategory: Manage SAN igroups
         explorer: false
     post:
       x-doc:
         title: Add initiators to an initiator group
         category: SAN
         filename: post-protocols-san-igroups-initiators.html
-        subcategory: Manage SAN iGroups
+        subcategory: Manage SAN igroups
         explorer: false
   "/protocols/san/igroups/{igroup.uuid}/initiators/{name}":
     delete:
@@ -1987,14 +1987,14 @@ paths:
         title: Delete an initiator from an initiator group
         category: SAN
         filename: delete-protocols-san-igroups-initiators-.html
-        subcategory: Manage SAN iGroups
+        subcategory: Manage SAN igroups
         explorer: false
     get:
       x-doc:
         title: Retrieve an initiator 
         category: SAN
         filename: get-protocols-san-igroups-initiators-.html
-        subcategory: Manage SAN iGroups
+        subcategory: Manage SAN igroups
         explorer: false
    
   "/protocols/san/igroups/{uuid}":
@@ -2003,21 +2003,21 @@ paths:
         title: Delete an initiator group
         category: SAN
         filename: delete-protocols-san-igroups-.html
-        subcategory: Manage SAN iGroups
+        subcategory: Manage SAN igroups
         explorer: false
     get:
       x-doc:
         title: Retrieve an initiator group
         category: SAN
         filename: get-protocols-san-igroups-.html
-        subcategory: Manage SAN iGroups
+        subcategory: Manage SAN igroups
         explorer: false
     patch:
       x-doc:
         title: Update an initiator group
         category: SAN
         filename: patch-protocols-san-igroups-.html
-        subcategory: Manage SAN iGroups
+        subcategory: Manage SAN igroups
         explorer: false
   "/protocols/san/iscsi/credentials":
     get:
@@ -2828,6 +2828,7 @@ paths:
         title: Retrieve login banner and messages of the day
         category: security
         filename: get-security-login-messages.html
+        subcategory: Manage security login messages
         explorer: false
   "/security/login/messages/{uuid}":
     get:
@@ -2835,12 +2836,14 @@ paths:
         title: Retrieve login messages configuration by UUID
         category: security
         filename: get-security-login-messages-.html
+        subcategory: Manage security login messages
         explorer: false
     patch:
       x-doc:
         title: Update login messages configuration
         category: security
         filename: patch-security-login-messages-.html
+        subcategory: Manage security login messages
         explorer: false
 
   "/security/roles":
@@ -3174,7 +3177,6 @@ paths:
         title: Start a file copy operation
         category: storage
         filename: post-storage-file-copy.html
-        subcategory: Manage storage file clones
         explorer: false
   
   
