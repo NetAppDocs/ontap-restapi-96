@@ -22867,7 +22867,7 @@ paths:
         Component Snapshot copies are essentially more granular application Snapshot copies. There is no difference beyond the scope of the operation.
         ### Learn more
         * [`DOC /application/applications/{application.uuid}/snapshots`](#docs-application-application_applications_{application.uuid}_snapshots)
-        * [`DELETE /application/applications/{uuid}/snapshots`](#operations-application-application_snapshot_delete)
+        * [`DELETE /application/applications/{application.uuid}/snapshots/{uuid}`](#operations-application-application_snapshot_delete)
         * [`DOC /application`](#docs-application-overview)
       operationId: application_component_snapshot_delete
       parameters:
@@ -27134,8 +27134,7 @@ paths:
         #### HTTPS error codes
         The following is a list of possible error codes that can be returned during a package delete operation.
         <br/>
-        ---
-        ```
+        
         # ONTAP Error Response codes
         | ----------- | -------------------------------------------------------- |
         | Error codes |                     Description                          |
@@ -27151,8 +27150,7 @@ paths:
         | 10551367    | A package synchronization is in progress                 |
         | 10551388    | Package delete operation timed out                       |
         | ----------- | -------------------------------------------------------- |
-        ```
-        ---
+        
         ### Retrieving software installation history information
         The following example shows how to
            - retrieve the software package installation history information.
@@ -51669,8 +51667,9 @@ paths:
         | CLI                | REST                |
         |--------------------|---------------------|
         |mirror-vault        | async               |
-        |                    |       |  sync_type  |
-        |                    |       |-------------|
+        
+        |CLI             |    REST |  sync_type  |
+        |----------------------|-----------|-------------|
         |sync-mirror         | sync  |  sync       |
         |strict-sync-mirror  | sync  | strict_sync |
       tags:
