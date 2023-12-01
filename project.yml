@@ -1,4 +1,4 @@
-jekyll: braced-links
+jekyll: bnorberg-api-testing
 settings:
   name: ONTAP 9.6 REST API Documentation 
   github_edit: false
