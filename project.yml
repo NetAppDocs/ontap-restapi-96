@@ -1,3 +1,4 @@
+jekyll: braced-links
 settings:
   name: ONTAP 9.6 REST API Documentation 
   github_edit: false
