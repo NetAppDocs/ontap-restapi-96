@@ -22867,7 +22867,7 @@ paths:
         Component Snapshot copies are essentially more granular application Snapshot copies. There is no difference beyond the scope of the operation.
         ### Learn more
         * [`DOC /application/applications/{application.uuid}/snapshots`](#docs-application-application_applications_{application.uuid}_snapshots)
-        * [`DELETE /application/applications/{uuid}/snapshots`](#operations-application-application_snapshot_delete)
+        * [`DELETE /application/applications/{application.uuid}/snapshots/{uuid}`](#operations-application-application_snapshot_delete)
         * [`DOC /application`](#docs-application-overview)
       operationId: application_component_snapshot_delete
       parameters:
@@ -27134,10 +27134,9 @@ paths:
         #### HTTPS error codes
         The following is a list of possible error codes that can be returned during a package delete operation.
         <br/>
-        ---
-        ```
+        
         # ONTAP Error Response codes
-        | ----------- | -------------------------------------------------------- |
+
         | Error codes |                     Description                          |
         | ----------- | -------------------------------------------------------- |
         | 10551315    | Package store is empty                                   |
@@ -27150,9 +27149,7 @@ paths:
         | 10551347    | Package delete failed since an update is in progress     |
         | 10551367    | A package synchronization is in progress                 |
         | 10551388    | Package delete operation timed out                       |
-        | ----------- | -------------------------------------------------------- |
-        ```
-        ---
+        
         ### Retrieving software installation history information
         The following example shows how to
            - retrieve the software package installation history information.
@@ -51669,8 +51666,9 @@ paths:
         | CLI                | REST                |
         |--------------------|---------------------|
         |mirror-vault        | async               |
-        |                    |       |  sync_type  |
-        |                    |       |-------------|
+        
+        |CLI             |    REST |  sync_type  |
+        |----------------------|-----------|-------------|
         |sync-mirror         | sync  |  sync       |
         |strict-sync-mirror  | sync  | strict_sync |
       tags:
@@ -64122,7 +64120,7 @@ paths:
           schema:
             $ref: '#/definitions/error_response'
       tags:
-      - svm
+      - SVM
     post:
       description: |
         Creates an SVM peer permission.
@@ -64183,7 +64181,7 @@ paths:
           schema:
             $ref: '#/definitions/error_response'
       tags:
-      - svm
+      - SVM
     x-ntap-long-description:
       description: |
         ## Managing SVM peer permissions
@@ -64196,7 +64194,7 @@ paths:
         - PATCH /api/svm/peer-permissions/{cluster.uuid}/{svm.uuid}
         - DELETE /api/svm/peer-permissions/{cluster.uuid}/{svm.uuid}
       tags:
-      - svm
+      - SVM
   /svm/peer-permissions/{cluster.uuid}/{svm.uuid}:
     delete:
       description: |
@@ -64240,7 +64238,7 @@ paths:
           schema:
             $ref: '#/definitions/error_response'
       tags:
-      - svm
+      - SVM
     get:
       description: |
         Retrieves the SVM peer permission instance.
@@ -64287,7 +64285,7 @@ paths:
           schema:
             $ref: '#/definitions/error_response'
       tags:
-      - svm
+      - SVM
     patch:
       description: |
         Updates the SVM peer permissions.
@@ -64338,7 +64336,7 @@ paths:
           schema:
             $ref: '#/definitions/error_response'
       tags:
-      - svm
+      - SVM
   /svm/peers:
     get:
       description: |
@@ -64426,7 +64424,7 @@ paths:
           schema:
             $ref: '#/definitions/error_response'
       tags:
-      - svm
+      - SVM
     post:
       description: |
         Creates a new SVM peer relationship.
@@ -64477,7 +64475,7 @@ paths:
           schema:
             $ref: '#/definitions/error_response'
       tags:
-      - svm
+      - SVM
     x-ntap-long-description:
       description: |
         ## Managing SVM peers
@@ -64490,7 +64488,7 @@ paths:
         - PATCH /api/svm/peers/{peer.uuid}
         - DELETE /api/svm/peers/{peer.uuid}
       tags:
-      - svm
+      - SVM
   /svm/peers/{peer.uuid}:
     delete:
       description: |
@@ -64529,7 +64527,7 @@ paths:
           schema:
             $ref: '#/definitions/error_response'
       tags:
-      - svm
+      - SVM
     get:
       description: |
         Retrieves the SVM peer relationship instance.
@@ -64571,7 +64569,7 @@ paths:
           schema:
             $ref: '#/definitions/error_response'
       tags:
-      - svm
+      - SVM
     patch:
       description: |
         Updates the SVM peer relationship.
@@ -64628,7 +64626,7 @@ paths:
           schema:
             $ref: '#/definitions/error_response'
       tags:
-      - svm
+      - SVM
   /svm/svms:
     get:
       description: |
@@ -64829,7 +64827,7 @@ paths:
           schema:
             $ref: '#/definitions/error_response'
       tags:
-      - svm
+      - SVM
     post:
       description: |
         Creates and provisions an SVM. If no IPspace is provided, then the SVM is created on the `Default` IPspace.
@@ -64970,7 +64968,7 @@ paths:
           schema:
             $ref: '#/definitions/error_response'
       tags:
-      - svm
+      - SVM
     x-ntap-long-description:
       description: |
         ## Managing SVMs
@@ -64984,7 +64982,7 @@ paths:
         3. Monitoring SVM
            Monitors jobs, network connections, network interfaces, and SVM health.
       tags:
-      - svm
+      - SVM
   /svm/svms/{uuid}:
     delete:
       description: |
@@ -65027,7 +65025,7 @@ paths:
           schema:
             $ref: '#/definitions/error_response'
       tags:
-      - svm
+      - SVM
     get:
       description: |-
         Retrieves the properties for an individual SVM. This includes protocol configurations such as CIFS and NFS, export policies, name service configurations, and network services.
@@ -65062,7 +65060,7 @@ paths:
           schema:
             $ref: '#/definitions/error_response'
       tags:
-      - svm
+      - SVM
     patch:
       description: |
         Updates one or more of the following properties of an individual SVM: SVM name, SVM default volume language code, SVM comment, and SVM state.
@@ -65145,7 +65143,7 @@ paths:
           schema:
             $ref: '#/definitions/error_response'
       tags:
-      - svm
+      - SVM
 produces:
 - application/json
 - application/hal+json
