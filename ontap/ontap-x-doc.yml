@@ -2260,14 +2260,14 @@ paths:
         explorer: false
     get:
       x-doc:
-        title: Retrieve a Vscan On-Demand configuration for an SVM
+        title: Retrieve the Vscan On-Demand configuration for an SVM
         category: NAS
         filename: get-protocols-vscan-on-demand-policies-.html
         subcategory: Manage Vscan On-Demand policies
         explorer: false
     patch:
       x-doc:
-        title: Update a Vscan On-Demand policy configuration for an SVM
+        title: Update the Vscan On-Demand policy configuration for an SVM
         category: NAS
         filename: patch-protocols-vscan-on-demand-policies-.html
         subcategory: Manage Vscan On-Demand policies
@@ -2275,14 +2275,14 @@ paths:
   "/protocols/vscan/{svm.uuid}/scanner-pools":
     get:
       x-doc:
-        title: Retrieve a Vscan scanner-pool configuration for an SVM
+        title: Retrieve the Vscan scanner-pool configuration for an SVM
         category: NAS
         filename: get-protocols-vscan-scanner-pools.html
         subcategory: Manage Vscan scanner-pool configuration
         explorer: false
     post:
       x-doc:
-        title: Create a Vscan scanner-pool configuration for an SVM
+        title: Create the Vscan scanner-pool configuration for an SVM
         category: NAS
         filename: post-protocols-vscan-scanner-pools.html
         subcategory: Manage Vscan scanner-pool configuration
@@ -2297,14 +2297,14 @@ paths:
         explorer: false
     get:
       x-doc:
-        title: Retrieve a Vscan scanner-pool configuration for an SVM
+        title: Retrieve the Vscan scanner-pool configuration for an SVM
         category: NAS
         filename: get-protocols-vscan-scanner-pools-.html
         subcategory: Manage Vscan scanner-pool configuration
         explorer: false
     patch:
       x-doc:
-        title: Update a Vscan scanner-pool configuration for an SVM
+        title: Update the Vscan scanner-pool configuration for an SVM
         category: NAS
         filename: patch-protocols-vscan-scanner-pools-.html
         subcategory: Manage Vscan scanner-pool configuration
