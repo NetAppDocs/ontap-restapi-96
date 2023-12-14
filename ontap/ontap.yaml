@@ -22332,7 +22332,7 @@ paths:
             GET /application/applications?template.name=sql*
             ```
             <br/>
-        4. Return a list of all applications that can be accessed via SAN.<br/>
+        4. Return a list of all applications that can be accessed via SAN.
             ```
             GET /application/applications?template.protocol=san
             ```
